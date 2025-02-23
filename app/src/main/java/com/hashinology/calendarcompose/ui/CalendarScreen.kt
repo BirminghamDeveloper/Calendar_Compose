@@ -19,6 +19,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel // <-- Correct import
 import com.hashinology.calendarcompose.ui.components.CalendarGrid
 import com.hashinology.calendarcompose.ui.components.EventList
@@ -70,4 +71,10 @@ fun CalendarScreen(eventViewModel: EventViewModel = viewModel()) {
             EventList(events = filteredEvents)
         }
     }
+}
+
+@Composable
+@Preview
+fun CalendarScreenPreview(modifier: Modifier = Modifier) {
+    CalendarScreen()
 }
